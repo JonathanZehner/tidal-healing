@@ -329,24 +329,23 @@ footer .menu-middle-footer-menu-container ul {
     padding-left: 0;
 }
 
-.hero-container {
+.home-page-header .hero-container {
     padding: 0;
     position: relative;
 }
 
-.hero-image {
+.home-page-header .hero-image {
     margin-bottom: 30px;
 }
 
-.hero-image img {
+.home-page-header .hero-image img {
     max-height: 728px;
     object-fit: cover;
     width: 100%;
 }
 
-/* Linear Gradient to add graininess to hero img with */
-.hero-image:before {
-    background-image: linear-gradient(to bottom, transparent 76%, #ffffffc4);
+.home-page-header .hero-image:before {
+    /* background-image: linear-gradient(to bottom, transparent 76%, #ffffffc4); */
     bottom: 0;
     content: "";
     left: 0;
@@ -356,28 +355,34 @@ footer .menu-middle-footer-menu-container ul {
 
 }
 
-.hero-title {
+.home-page-header .hero-title {
+    background-image: linear-gradient(to bottom, #426da8 15%, transparent 50%, white 98%);
     bottom: 20px;
     color: #1e2223;
     left: 0;
-    padding-left: 7px;
+    padding-left: 0;
     position: absolute;
     right: 0;
     text-transform: uppercase;
+    top: 0;
+}
+
+.home-page-header .logo-container {
+    margin: 0;
+    width: 200px;
 }
 
 .home-page-header .navigation {
-    background-image: linear-gradient(to top, white 10%, transparent 47%);
     display: flex;
     padding: 150px 0 25px;
     width: 100%;
 }
 
-.navigation .custom-menu-class {
+.home-page-header .navigation .custom-menu-class {
     width: 70%;
 }
 
-.navigation .custom-menu-class ul {
+.home-page-header .navigation .custom-menu-class ul {
     display: flex;
     padding-left: 0;
 }
@@ -509,6 +514,11 @@ div .featured-image {
 @media (min-width: 500px) {
 
     /*-- Header --*/
+    .home-page-header .navigation {
+        display: flex;
+        padding: 150px 0 25px;
+        width: 100%;
+    }
 
     /*-- Body --*/
     .sub-heading,
