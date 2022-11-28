@@ -387,9 +387,12 @@ footer .menu-middle-footer-menu-container ul {
 }
 /*---- End Header Styling ----*/
 
-.hero-title h2 {
+/*---- Begin Body Styling ----*/
+.page-hero-content h2 {
     font: normal 400 2rem/1.5 'bilo', sans-serif;
 }
+
+/*---- End Body Styling ----*/
 
 /*==============================================================================
 
@@ -538,6 +541,11 @@ div .featured-image {
     .index-featured-image img {
         object-fit: cover;
         width: 100%;
+    }
+
+    .page-hero-content img {
+        width: 200px;
+        height: auto;
     }
 
     /*-- Footer --*/

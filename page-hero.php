@@ -27,7 +27,7 @@
                     while(have_posts()){
                         the_post(); ?>
                     
-                    <!-- Begin Header Section: manually coded for this specific page template -->
+        <!-- Begin Header Section: manually coded for this specific page template -->
                         <header class="home-page-header">
                             <div class="container">
                                 <div class="row">
@@ -71,14 +71,14 @@
                         </header>
                     <!-- End Header Section -->
 
-                    <!-- // Body Content:  -->
+        <!-- // Body Content:  -->
                         <!-- Create container to hold everything in middle of the page. -->
                         <div class="container">
                             <!-- Call Bootstrap -->
                             <div class="row">
                             <!-- Main Content -->
                                 <main class="col-md-12">
-                                    <section class="contact-form">
+                                    <section class="page-hero-content">
                                         <?php the_content(); ?>
                                     </section>
                                 </main>
@@ -90,7 +90,53 @@
                     <?php
                     } // While Loop
                 } // End if statement
+                ?>
 
+        <!-- Custom WordPress Query for Testimonials -->
+                        <aside class="container">
+                            <h3>Testimonials</h3>
+                            <p>Some text to describe the query below.</p>
+                            <div class="row">
+                                <?php 
+                                // Create variable for arguments
+                                    $args = array(
+                                        'post_type'         =>  'post',
+                                        'post_status'       =>  'publish',
+                                        'posts_per_page'    =>   3,
+                                        'order'             =>  'DESC',
+                                        'orderby'           =>  'rand',
+                                        'category_name'     =>  'testimonials'
+                                    );
+
+                                // Create variable for query
+                                    $query = new WP_Query($args);
+
+                                // WordPress Loop (modified for query)
+                                    if($query->have_posts()){
+                                        while($query->have_posts()){
+                                            $query->the_post(); 
+                                ?>
+                                        <!-- HTML for the post -->
+                                            <div class="individual-post col-md-4">
+                                            <!-- Set featured image -->
+                                                <div class="index-featured-image">
+                                                    <?php the_post_thumbnail('thumbnail'); ?>
+                                                </div>
+
+                                            <!-- The post -->
+                                                <div class="text-container">
+                                                    <h2><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h2>
+                                                    <p class="excerpt"><?php echo the_excerpt(); ?></p>
+                                                </div>
+                                            </div>
+                                <?php
+                                        }
+                                    }
+                                ?>
+                            </div>
+                        </aside>
+        <!-- Get Footer -->                
+            <?php
                 // Insert Footer
                 get_footer();
             ?>
