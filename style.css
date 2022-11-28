@@ -114,7 +114,7 @@ body {
 }
 
 body {
-    color: #1e2223;
+    color: #090b0c;
     display: flex;
     /* Sticky Footer */
     flex-direction: column;
@@ -139,7 +139,6 @@ body {
 ------------------------------------------------------------------------------*/
 
 header {
-    background-color: #1e2223;
     padding: 25px 1%;
 }
 
@@ -211,7 +210,7 @@ h3 a,
 h4 a,
 h5 a,
 h6 a {
-    color: #1e2223;
+    color: #426da8;
     text-decoration: none;
 }
 
@@ -319,8 +318,19 @@ footer .menu-middle-footer-menu-container ul {
         Home/Hero Page Styling (desktop)
 
 ==============================================================================*/
+/*---- Begin Header ----*/
+.home-page-header {
+    padding: 0px 0%;
+}
+
+.home-page-header .container {
+    --bs-gutter-x: 0;
+    max-width: 100%;
+    padding-left: 0;
+}
 
 .hero-container {
+    padding: 0;
     position: relative;
 }
 
@@ -336,7 +346,7 @@ footer .menu-middle-footer-menu-container ul {
 
 /* Linear Gradient to add graininess to hero img with */
 .hero-image:before {
-    background-image: linear-gradient(to bottom, transparent, transparent, transparent, transparent, #ffffffc4);
+    background-image: linear-gradient(to bottom, transparent 76%, #ffffffc4);
     bottom: 0;
     content: "";
     left: 0;
@@ -355,6 +365,27 @@ footer .menu-middle-footer-menu-container ul {
     right: 0;
     text-transform: uppercase;
 }
+
+.home-page-header .navigation {
+    background-image: linear-gradient(to top, white 10%, transparent 47%);
+    display: flex;
+    padding: 150px 0 25px;
+    width: 100%;
+}
+
+.navigation .custom-menu-class {
+    width: 70%;
+}
+
+.navigation .custom-menu-class ul {
+    display: flex;
+    padding-left: 0;
+}
+
+.home-page-header .navigation a {
+    color: #426da8;
+}
+/*---- End Header Styling ----*/
 
 .hero-title h2 {
     font: normal 400 2rem/1.5 'bilo', sans-serif;
