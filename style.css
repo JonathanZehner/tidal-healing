@@ -374,12 +374,15 @@ footer .menu-middle-footer-menu-container ul {
 
 .home-page-header .navigation {
     display: flex;
-    padding: 150px 0 25px;
-    width: 100%;
+    width: auto;
+    float: right;
+    top: 0;
+    position: absolute;
+    right: 10px;
 }
 
 .home-page-header .navigation .custom-menu-class {
-    width: 70%;
+    width: auto;
 }
 
 .home-page-header .navigation .custom-menu-class ul {
@@ -387,9 +390,19 @@ footer .menu-middle-footer-menu-container ul {
     padding-left: 0;
 }
 
-.home-page-header .navigation a {
-    color: #426da8;
+.home-page-header .navigation .custom-menu-class .mega-menu li:hover {
+    background-color: #090b0c !important;
 }
+
+.home-page-header .navigation a:active {
+    color: #cbcfd3 !important;
+    z-index: 9999999;
+}
+
+.home-page-header .navigation .custom-menu-class .mega-menu li a:hover {
+    color: #cbcfd3 !important;
+}
+
 /*---- End Header Styling ----*/
 
 /*---- Begin Body Styling ----*/
@@ -518,6 +531,10 @@ div .featured-image {
         display: flex;
         padding: 150px 0 25px;
         width: 100%;
+    }
+
+    .home-page-header .navigation .custom-menu-class {
+        width: 70%;
     }
 
     /*-- Body --*/
