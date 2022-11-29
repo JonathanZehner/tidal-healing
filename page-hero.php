@@ -30,9 +30,9 @@
         <!-- Begin Header Section: manually coded for this specific page template -->
                         <header class="home-page-header">
                             <div class="container">
-                                <div class="row">
+                                <div class="row parallax">
                                     <!-- // HTML Hero Image: featured image assigned to this page. -->
-                                    <div class="hero-container">
+                                    <div class="hero-container parallax-content">
                                         <!-- Create container for Hero Image -->
                                         <div class="hero-image">
                                             <!-- Call featured img. of this page -->
@@ -73,7 +73,7 @@
 
         <!-- // Body Content:  -->
                         <!-- Create container to hold everything in middle of the page. -->
-                        <div class="container">
+                        <div class="container main-body-content-container">
                             <!-- Call Bootstrap -->
                             <div class="row">
                             <!-- Main Content -->

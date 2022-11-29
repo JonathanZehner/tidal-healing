@@ -321,6 +321,8 @@ footer .menu-middle-footer-menu-container ul {
 /*---- Begin Header ----*/
 .home-page-header {
     padding: 0px 0%;
+    /* position: fixed;
+    z-index: -1; */
 }
 
 .home-page-header .container {
@@ -406,6 +408,12 @@ footer .menu-middle-footer-menu-container ul {
 /*---- End Header Styling ----*/
 
 /*---- Begin Body Styling ----*/
+/* .container.main-body-content-container {
+    background-image: linear-gradient(to top, white 97%, transparent);
+    padding-top: 70px;
+    margin-top: 145%;
+} */
+
 .page-hero-content h2 {
     font: normal 400 2rem/1.5 'bilo', sans-serif;
 }
@@ -523,25 +531,50 @@ div .featured-image {
                                 Media Queries
 
 ==============================================================================*/
-/*--------------    Begin Min-Width (500px) Media Query     --------------*/
-@media (min-width: 500px) {
+/*--------------    Begin Min-Width (550px) Media Query     --------------*/
+@media (min-width: 550px) {
 
     /*-- Header --*/
     .home-page-header .navigation {
+        bottom: 0;
         display: flex;
+        float: none;
         padding: 150px 0 25px;
+        right: auto;
+        top: auto;
         width: 100%;
     }
 
-    .home-page-header .navigation .custom-menu-class {
-        width: 70%;
+    .home-page-header .navigation .custom-menu-class .mega-menu li:hover {
+        background-color: #090b0c00 !important;
     }
+
+    .home-page-header .navigation .custom-menu-class .mega-menu li a:active {
+        color: #090b0c !important;
+        z-index: 9999999;
+    }
+
+    .home-page-header .navigation .custom-menu-class .mega-menu li a:hover {
+        color: #090b0c !important;
+    }
+
+    /* .home-page-header .navigation .custom-menu-class .mega-menu li a:hover {
+        color: #090b0c !important;
+        z-index: 9999999;
+    } */
 
     /*-- Body --*/
     .sub-heading,
     .cta {
         display: block;
     }
+
+    /* .container.main-body-content-container {
+        margin-top: auto;
+        padding-top: 0;
+        position: relative;
+        top: 20%;
+    } */
 
     /*-- Footer --*/
 }
