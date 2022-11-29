@@ -19,7 +19,7 @@
     </head>
 
     <body <?php body_class(); ?>>
-        <div class="content">
+        <div class="content home-page">
             <?php
                 // Begin WordPress Loop:
                 if(have_posts()){
@@ -93,7 +93,7 @@
                 ?>
 
         <!-- Custom WordPress Query for Testimonials -->
-                        <aside class="container">
+                        <aside class="container testimonial-container">
                             <h3>Testimonials</h3>
                             <p>Some text to describe the query below.</p>
                             <div class="row">

@@ -214,6 +214,10 @@ h6 a {
     text-decoration: none;
 }
 
+p {
+    padding: 10px;
+}
+
 .featured-image img {
     height: auto;
     margin-bottom: 25px;
@@ -245,7 +249,8 @@ a:hover {
 .individual-blog-post .featured-image img,
 .individual-post img,
 .sidebar-widget-container img,
-.wp-block-image img {
+.wp-block-image img,
+.page-hero-content img {
     box-shadow:
         0 1px 1px hsl(0deg 0% 0% / 0.075),
         0 2px 2px hsl(0deg 0% 0% / 0.075),
@@ -408,15 +413,38 @@ footer .menu-middle-footer-menu-container ul {
 /*---- End Header Styling ----*/
 
 /*---- Begin Body Styling ----*/
-/* .container.main-body-content-container {
-    background-image: linear-gradient(to top, white 97%, transparent);
-    padding-top: 70px;
-    margin-top: 145%;
-} */
+.main-body-content-container {
+    top: -3%;
+    position: relative;
+}
 
 .page-hero-content h2 {
     font: normal 400 2rem/1.5 'bilo', sans-serif;
 }
+
+.page-hero-content img {
+    margin: 20px auto 10px;
+}
+
+.home-page aside {
+    position: relative;
+    top: -140px;
+}
+
+.index-featured-image {
+    margin-bottom: 25px;
+}
+
+.testimonial-container img {
+    border-radius: 75px;
+}
+
+.testimonial-container p.excerpt {
+    margin: 0;
+    padding: 0;
+}
+
+
 
 /*---- End Body Styling ----*/
 
@@ -535,6 +563,10 @@ div .featured-image {
 @media (min-width: 550px) {
 
     /*-- Header --*/
+    .home-page-header .hero-title {
+        background-image: linear-gradient(to bottom, transparent 50%, white 98%);
+    }
+
     .home-page-header .navigation {
         bottom: 0;
         display: flex;
@@ -575,6 +607,16 @@ div .featured-image {
         position: relative;
         top: 20%;
     } */
+
+    /*-- Footer --*/
+}
+
+/*--------------    Begin Min-Width (600px) Media Query     --------------*/
+@media (min-width: 600px) {
+
+    /*-- Header --*/
+
+    /*-- Body --*/
 
     /*-- Footer --*/
 }
