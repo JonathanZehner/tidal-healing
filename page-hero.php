@@ -95,7 +95,7 @@
         <!-- Custom WordPress Query for Testimonials -->
                         <aside class="container testimonial-container">
                             <h3>Testimonials</h3>
-                            <p>Some text to describe the query below.</p>
+                            <p>Here are comments from some of my clients. </p>
                             <div class="row">
                                 <?php 
                                 // Create variable for arguments

@@ -619,6 +619,27 @@ div .featured-image {
     } */
 
     /*-- Body --*/
+    .main-body-content-container,
+    .home-page aside {
+        top: auto;
+    }
+
+    .testimonial-container h3 {
+        margin-top: 30px;
+    }
+
+    .testimonial-container .individual-post {
+        display: flex;
+    }
+
+    .testimonial-container .index-featured-image {
+        margin-right: 20px;
+    }
+
+    .testimonial-container .row div:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+
     .sub-heading,
     .cta {
         display: block;
