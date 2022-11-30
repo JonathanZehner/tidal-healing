@@ -14,7 +14,7 @@
 
     <body <?php body_class(); ?>>
         <div class="content">
-            <header>
+            <header class="header">
                 <div class="container">
                     <div class="row">
                     <!-- Brand Logo -->
