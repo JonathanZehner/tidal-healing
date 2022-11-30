@@ -6,11 +6,11 @@
     get_header(); 
 ?>
 
-    <div class="container">
+    <div class="container sidebar-template-page">
         <div class="row">
 
         <!-- Create Left Sidebar -->
-            <aside class="col-md-3">
+            <aside class="col-md-3 sidebar-template-page aside">
                 <?php get_sidebar(); ?>
             </aside>
 

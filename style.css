@@ -137,6 +137,13 @@ body {
 /*------------------------------------------------------------------------------
         Body Styling
 ------------------------------------------------------------------------------*/
+.sidebar-template-page {
+    margin-top: 10px;
+}
+
+.aside {
+    margin-top: 70px;
+}
 
 h1 {
     font-size: 2rem;
@@ -194,6 +201,7 @@ a:hover {
 .individual-blog-post .featured-image img,
 .individual-post img,
 .sidebar-widget-container img,
+.sidebar-widget-container iframe,
 .wp-block-image img,
 .page-hero-content img {
     box-shadow:

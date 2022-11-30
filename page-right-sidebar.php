@@ -5,7 +5,7 @@
     get_header(); 
 ?>
 
-    <div class="container">
+    <div class="container sidebar-template-page">
         <div class="row">
             <main class="col-md-9">
                 <?php
@@ -27,7 +27,7 @@
             </main>
 
         <!-- Create Right Sidebar -->
-            <aside class="col-md-3">
+            <aside class="col-md-3 sidebar-template-page aside">
                 <?php get_sidebar(); ?>
             </aside>
         </div>
