@@ -16,7 +16,7 @@
                             <div class="single-page">
                                 <div class="text-container">
                                     <h2><a href="<?php get_the_permalink();?>"><?php the_title(); ?></a></h2>
-                                    <p class="excerpt"><?php echo get_the_excerpt(); ?></p>
+                                    <p class="excerpt"><?php echo the_content(); ?></p>
                                 </div>
                             </div>
 

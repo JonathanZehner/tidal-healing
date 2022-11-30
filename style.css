@@ -218,17 +218,22 @@ a:hover {
 
 .header {
     background-color: #426da8;
+    background-image: url(./images/watercolor-background.png);
+    background-position: revert;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
 }
 
 .header .container {
-    margin: 0 auto;
+    background-image: linear-gradient(45deg, #064aa6fa, transparent);
+    max-width: inherit;
 }
 
-/* .header .row {
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin: 0 auto 0 0;
-} */
+.header .row {
+    margin: auto;
+    width: 100%;
+}
 
 .header .logo-container {
     margin: 0;
@@ -247,7 +252,6 @@ a:hover {
 
 .header .navigation {
     margin: 0 auto;
-    padding-top: 25px;
     width: 75%;
 }
 
@@ -259,12 +263,8 @@ a:hover {
     justify-content: space-evenly;
 }
 
-.header .navigation .custom-menu-class .mega-menu li:hover {
-    background-color: #6cb7f5 !important;
-}
-
 .header .navigation a {
-    color: #c1d3d9 !important;
+    color: #cbcfd3 !important;
     text-decoration: none;
 }
 
@@ -677,6 +677,10 @@ div .featured-image {
 @media (min-width: 720px) {
 
     /*-- Header --*/
+    .header .row {
+        width: 90%;
+    }
+
     header .sub-nav-menu {
         display: block;
     }
@@ -690,6 +694,9 @@ div .featured-image {
 @media (min-width: 768px) {
 
     /*-- Header --*/
+    .header .row {
+        width: 80%;
+    }
 
     /*-- Body --*/
     .index-featured-image img {
