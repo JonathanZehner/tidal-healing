@@ -6,13 +6,6 @@
                     <!-- Left Footer Widget and Menu -->
                         <div class="col-md-3 left-footer-container">
 
-                        <!-- Left Footer Widget -->
-                            <div class="left-footer-widget">
-                                <?php
-                                    dynamic_sidebar('left-footer-widget');
-                                ?>                        
-                            </div>
-
                         <!-- Left Footer Menu -->
                             <div class="left-footer-menu">
                                 <?php // Create conditional loop for footer menu
@@ -29,6 +22,13 @@
                                         echo "<p>Please select a menu through the dashboard</p>";
                                     }
                                 ?>
+                            </div>
+                            
+                        <!-- Left Footer Widget -->
+                            <div class="left-footer-widget">
+                                <?php
+                                    dynamic_sidebar('left-footer-widget');
+                                ?>                        
                             </div>
                         </div>
 

@@ -272,7 +272,7 @@ a:hover {
 ------------------------------------------------------------------------------*/
 
 footer {
-    background-image: linear-gradient(to bottom, transparent, #c1d3d9);
+    background-image: linear-gradient(to bottom, transparent, #6cb7f5 125%);
     margin: 0;
     padding: 25px 0 10px;
     width: 100%;
@@ -289,10 +289,8 @@ footer p {
     font-size: 0.8rem;
 }
 
-.left-footer-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+.left-footer-menu {
+    width: 90%;
 }
 
 .left-footer-widget,
@@ -315,8 +313,8 @@ footer .left-footer-widget-container {
 }
 
 footer .middle-footer-container {
-    width: 45%;
     margin: 0 auto;
+    max-width: 550px;
 }
 
 footer .middle-footer-container .norm_row {
@@ -327,8 +325,16 @@ footer .middle-footer-menu {
     width: 100%;
 }
 
+footer .middle-footer-widget {
+    padding-top: 25px;
+}
+
 footer .menu-middle-footer-menu-container ul {
     display: flex;
+}
+
+.middle-footer-widget div:nth-child(4) {
+    padding-top: 15px;
 }
 
 /*==============================================================================
@@ -440,6 +446,7 @@ footer .menu-middle-footer-menu-container ul {
 }
 
 .home-page aside {
+    max-width: 1028px;
     position: relative;
     top: -140px;
 }
@@ -457,7 +464,16 @@ footer .menu-middle-footer-menu-container ul {
     padding: 0;
 }
 
+.testimonial-container .individual-post {
+    margin: 10px;
+}
 
+.testimonial-container .individual-post:nth-child(even) {
+    border-top: 1px solid #89b4c4;
+    border-bottom: 1px solid #89b4c4;
+    padding-top: 25px;
+    text-align: right;
+}
 
 /*---- End Body Styling ----*/
 
@@ -572,15 +588,6 @@ div .featured-image {
                                 Media Queries
 
 ==============================================================================*/
-/*--------------    Begin Min-Width (420px) Media Query     --------------*/
-@media (min-width: 420px) {
-
-/*-- Footer --*/
-    .left-footer-container {
-        flex-direction: row;
-    }
-
-}
 
 /*--------------    Begin Min-Width (550px) Media Query     --------------*/
 @media (min-width: 550px) {
@@ -613,11 +620,6 @@ div .featured-image {
         color: #090b0c !important;
     }
 
-    /* .home-page-header .navigation .custom-menu-class .mega-menu li a:hover {
-        color: #090b0c !important;
-        z-index: 9999999;
-    } */
-
     /*-- Body --*/
     .main-body-content-container,
     .home-page aside {
@@ -640,19 +642,16 @@ div .featured-image {
         flex-direction: row-reverse;
     }
 
+    .testimonial-container .individual-post .text-container {
+        margin: 20px 20px 0 0;
+    }
+
     .sub-heading,
     .cta {
         display: block;
     }
 
     /*-- Footer --*/
-    .left-footer-container {
-        width: 50%;
-    }
-
-    .left-footer-widget {
-        padding: 0 30px 0 0;
-    }
 }
 
 /*--------------    Begin Min-Width (600px) Media Query     --------------*/
@@ -692,6 +691,14 @@ div .featured-image {
     .page-hero-content img {
         width: 200px;
         height: auto;
+    }
+
+    .testimonial-container .row {
+        flex-direction: column;
+    }
+
+    .individual-post {
+        width: auto;
     }
 
     /*-- Footer --*/
