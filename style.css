@@ -512,7 +512,6 @@ footer .menu-middle-footer-menu-container ul {
 }
 
 .hero-container .hero-title {
-    color: #cbcfd3;
     left: 0;
     position: absolute;
     right: 0;
@@ -523,6 +522,45 @@ footer .menu-middle-footer-menu-container ul {
 .hero-container .hero-title h2 {
     font: normal 5rem/1.5 'mrlackboughs-pro', 'bilo', sans-serif;
 }
+
+/*==============================================================================
+
+        Explore Page Styling
+
+==============================================================================*/
+/*---- Header ----*/
+
+/*---- Body ----*/
+.explore {
+    max-width: 100%;
+    padding: 0;
+}
+
+.page-title, .excerpt {
+    display: none;
+}
+
+.cover-text {
+    font: normal 10rem/1.5 'mrlackboughs-pro', 'bilo', sans-serif !important;
+}
+
+.first-para {
+    max-width: 720px;
+    padding: 25px;
+}
+
+.horizontal-line {
+    margin: 10px auto;
+    max-width: 1028px;
+    width: 90%;
+}
+
+.media-text-box {
+    max-width: 1028px;
+    width: 90%;
+}
+
+/*---- Footer ----*/
 
 /*==============================================================================
 
