@@ -496,6 +496,36 @@ footer .menu-middle-footer-menu-container ul {
 
 /*==============================================================================
 
+        Hero Left Sidebar Page Styling
+
+==============================================================================*/
+/*---- Begin Header ----*/
+.hero-container {
+    background-image: linear-gradient(to bottom, transparent, white);
+    position: relative;
+}
+
+.hero-container .hero-image img {
+    height: auto;
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+.hero-container .hero-title {
+    color: #cbcfd3;
+    left: 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    bottom: 5%;
+}
+
+.hero-container .hero-title h2 {
+    font: normal 5rem/1.5 'mrlackboughs-pro', 'bilo', sans-serif;
+}
+
+/*==============================================================================
+
         Contact Page Styling (desktop)
 
 ==============================================================================*/
