@@ -153,7 +153,7 @@ add_action('widgets_init','blank_widgets_init');
 /*====================================
     Create Custom Post Type
 ====================================*/
-// Custom post type: Employee
+// Custom post type: Clients
     /* 
     
     This function was created using the Post Type Generator 
@@ -167,49 +167,49 @@ add_action('widgets_init','blank_widgets_init');
     */
 
 // Register Custom Post Type
-function employeeDirectory() {
+function clientDirectory() {
 
 	$labels = array(
-		'name'                  => _x( 'Employees', 'Post Type General Name', 'pro-photography' ),
-		'singular_name'         => _x( 'Employee', 'Post Type Singular Name', 'pro-photography' ),
-		'menu_name'             => __( 'Employees', 'pro-photography' ),
-		'name_admin_bar'        => __( 'Employee', 'pro-photography' ),
-		'archives'              => __( 'Employee', 'pro-photography' ),
-		'attributes'            => __( 'Employee Attributes', 'pro-photography' ),
-		'parent_item_colon'     => __( 'Parent Employee:', 'pro-photography' ),
-		'all_items'             => __( 'All Employees', 'pro-photography' ),
-		'add_new_item'          => __( 'Add New Employee', 'pro-photography' ),
-		'add_new'               => __( 'Add New', 'pro-photography' ),
-		'new_item'              => __( 'New Employee', 'pro-photography' ),
-		'edit_item'             => __( 'Edit Employee', 'pro-photography' ),
-		'update_item'           => __( 'Update Employee', 'pro-photography' ),
-		'view_item'             => __( 'View Employee', 'pro-photography' ),
-		'view_items'            => __( 'View Employees', 'pro-photography' ),
-		'search_items'          => __( 'Search Employee', 'pro-photography' ),
-		'not_found'             => __( 'Not found', 'pro-photography' ),
-		'not_found_in_trash'    => __( 'Not found in Trash', 'pro-photography' ),
-		'featured_image'        => __( 'Headshot', 'pro-photography' ),
-		'set_featured_image'    => __( 'Set Headshot', 'pro-photography' ),
-		'remove_featured_image' => __( 'Remove Headshot', 'pro-photography' ),
-		'use_featured_image'    => __( 'Use as Headshot', 'pro-photography' ),
-		'insert_into_item'      => __( 'Insert into Employee', 'pro-photography' ),
-		'uploaded_to_this_item' => __( 'Uploaded to this Employee', 'pro-photography' ),
-		'items_list'            => __( 'Employees list', 'pro-photography' ),
-		'items_list_navigation' => __( 'Employees list navigation', 'pro-photography' ),
-		'filter_items_list'     => __( 'Filter Employees list', 'pro-photography' ),
+		'name'                  => _x( 'Clients', 'Post Type General Name', 'tidal-healing' ),
+		'singular_name'         => _x( 'Client', 'Post Type Singular Name', 'tidal-healing' ),
+		'menu_name'             => __( 'Clients', 'tidal-healing' ),
+		'name_admin_bar'        => __( 'Clients', 'tidal-healing' ),
+		'archives'              => __( 'Client Archives', 'tidal-healing' ),
+		'attributes'            => __( 'Client Attributes', 'tidal-healing' ),
+		'parent_item_colon'     => __( 'Parent Client:', 'tidal-healing' ),
+		'all_items'             => __( 'All Clients', 'tidal-healing' ),
+		'add_new_item'          => __( 'Add New Client', 'tidal-healing' ),
+		'add_new'               => __( 'Add Client', 'tidal-healing' ),
+		'new_item'              => __( 'New Client', 'tidal-healing' ),
+		'edit_item'             => __( 'Edit Client', 'tidal-healing' ),
+		'update_item'           => __( 'Update Client', 'tidal-healing' ),
+		'view_item'             => __( 'View Client', 'tidal-healing' ),
+		'view_items'            => __( 'View Clients', 'tidal-healing' ),
+		'search_items'          => __( 'Search Client', 'tidal-healing' ),
+		'not_found'             => __( 'Not found', 'tidal-healing' ),
+		'not_found_in_trash'    => __( 'Not found in Trash', 'tidal-healing' ),
+		'featured_image'        => __( 'Featured Headshot', 'tidal-healing' ),
+		'set_featured_image'    => __( 'Set featured Headshot', 'tidal-healing' ),
+		'remove_featured_image' => __( 'Remove featured Headshot', 'tidal-healing' ),
+		'use_featured_image'    => __( 'Use as featured Headshot', 'tidal-healing' ),
+		'insert_into_item'      => __( 'Insert into client', 'tidal-healing' ),
+		'uploaded_to_this_item' => __( 'Uploaded to this client', 'tidal-healing' ),
+		'items_list'            => __( 'Clients list', 'tidal-healing' ),
+		'items_list_navigation' => __( 'Clients list navigation', 'tidal-healing' ),
+		'filter_items_list'     => __( 'Filter clients list', 'tidal-healing' ),
 	);
 	$rewrite = array(
-		'slug'                  => 'employees',
+		'slug'                  => 'clients',
 		'with_front'            => true,
 		'pages'                 => true,
 		'feeds'                 => true,
 	);
 	$args = array(
-		'label'                 => __( 'Employee', 'pro-photography' ),
-		'description'           => __( 'Directory of employees for the company', 'pro-photography' ),
+		'label'                 => __( 'Client', 'tidal-healing' ),
+		'description'           => __( 'Directory of clients who have received services', 'tidal-healing' ),
 		'labels'                => $labels,
         'show_in_rest'          => true, // Manually type this in to enable block editor
-		'supports'              => array( 'title', 'editor', 'thumbnail', 'revisions', 'custom-fields', 'page-attributes' ),
+		'supports'              => array( 'title', 'editor', 'thumbnail', 'comments', 'revisions', 'custom-fields', 'page-attributes', 'post-formats' ),
 		'taxonomies'            => array( 'category', 'post_tag' ),
 		'hierarchical'          => false,
 		'public'                => true,
@@ -222,14 +222,13 @@ function employeeDirectory() {
 		'can_export'            => true,
 		'has_archive'           => true,
 		'exclude_from_search'   => false,
-		'publicly_queryable'    => true,
-		'rewrite'               => $rewrite,
+		'publicly_queryable'    => false,
 		'capability_type'       => 'page',
 	);
-	register_post_type( 'employeeDirectory', $args );
+	register_post_type( 'clientDirectory', $args );
 
 }
-add_action( 'init', 'employeeDirectory', 0 );
+add_action( 'init', 'clientDirectory', 0 );
 
 /*====================================
     Custom Query Shortcode
