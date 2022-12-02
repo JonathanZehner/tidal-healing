@@ -154,7 +154,7 @@ h3,
 h4,
 h5,
 h6 {
-    font: normal 400 1.5rem/1.5 'new-hero', helvetica, sans-serif;
+    font: normal 400 1.5rem/1.5 'new-hero', 'bilo', sans-serif;
 }
 
 h2 a,
@@ -203,7 +203,8 @@ a:hover {
 .sidebar-widget-container img,
 .sidebar-widget-container iframe,
 .wp-block-image img,
-.page-hero-content img {
+.page-hero-content img,
+.contact-form-box {
     box-shadow:
         0 1px 1px hsl(0deg 0% 0% / 0.075),
         0 2px 2px hsl(0deg 0% 0% / 0.075),
@@ -218,6 +219,10 @@ a:hover {
 
 .individual-post a p {
     color: #1e2223;
+}
+
+.script-h2 {
+    font: normal 4rem/1.5 'mrlackboughs-pro', 'bilo', sans-serif !important;
 }
 
 /*------------------------------------------------------------------------------
@@ -449,13 +454,8 @@ footer .menu-middle-footer-menu-container ul {
 /*---- End Header Styling ----*/
 
 /*---- Begin Body Styling ----*/
-.main-body-content-container {
-    top: -3%;
-    position: relative;
-}
-
 .page-hero-content h2 {
-    font: normal 400 2rem/1.5 'bilo', sans-serif;
+    font: normal 400 2rem/1.5 'mrlackboughs-pro', 'bilo', sans-serif !important;
 }
 
 .page-hero-content img {
@@ -466,10 +466,19 @@ footer .menu-middle-footer-menu-container ul {
     max-width: 1028px;
     position: relative;
     top: -140px;
+    width: 80%;
 }
 
 .index-featured-image {
     margin-bottom: 25px;
+}
+
+.testimonial-container h3 {
+    font: normal 400 2.5rem/1.5 'mrlackboughs-pro', 'bilo', sans-serif !important;
+}
+
+.testimonial-container h2 {
+    font: normal 400 1.5rem/1.5 'bilo', sans-serif !important;
 }
 
 .testimonial-container img {
@@ -564,12 +573,72 @@ footer .menu-middle-footer-menu-container ul {
 
 /*==============================================================================
 
-        Contact Page Styling (desktop)
+        Services Page Styling
 
 ==============================================================================*/
-main .contact-form .wpforms-container-full .wpforms-form {
-    margin: 0 auto;
-    max-width: 500px;
+/*---- Header ----*/
+
+/*---- Body ----*/
+.hero-image-with-text-overlay {
+    background-position-x: 45%;
+    min-height: 75vh !important;
+}
+
+.wp-block-cover__inner-container {
+    width: 500px !important;
+}
+
+.service-pricing-container h2,
+.service-pricing-container h3,
+.service-pricing-container h4,
+.service-pricing-container p {
+    padding: 10px 1.5em 5px;
+}
+
+.service-pricing-container h2 {
+    font-family: 'mrlackboughs-pro';
+    font-size: 3rem;
+}
+
+.service-pricing-container h3 {
+    font-size: 1.25rem !important;
+}
+
+.service-pricing-container h4 {
+    font-size: 1rem !important;
+}
+
+.services-content {
+    margin: 25px auto;
+    padding: 0 2%;
+    width: 90%;
+}
+
+.services-content h2 {
+    font-family: 'mrlackboughs-pro';
+    font-size: 2.5rem;
+}
+
+/*---- Footer ----*/
+
+/*==============================================================================
+
+        Contact Page Styling
+
+==============================================================================*/
+.contact-form-box {
+    max-width: 1028px;
+    width: 80%;
+    margin: 25px auto;
+}
+
+.contact-form {
+    max-width: 675px;
+    width: 80% !important;
+}
+
+.contact-cover-img-container .wp-block-cover {
+    height: 100%;
 }
 
 /*==============================================================================
@@ -680,6 +749,10 @@ div .featured-image {
     /*-- Header --*/
     .home-page-header .hero-title {
         background-image: linear-gradient(to bottom, transparent 50%, white 98%);
+    }
+
+    .home-page-header .logo-container {
+        margin: 0 auto 0 30px;
     }
 
     .home-page-header .navigation {
